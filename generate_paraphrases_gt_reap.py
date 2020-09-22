@@ -75,6 +75,7 @@ def main(args):
     bpe = BPE(bpe_codes, separator='@@', vocab=bpe_vocab)
 
     device_id = args.device_ids
+    print("DEVICE ID IS:", device_id, "\n OF TYPE:", str(type(device_id)))
     torch.cuda.set_device(device_id)
     device = torch.device("cuda", device_id)
 
